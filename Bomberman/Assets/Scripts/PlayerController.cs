@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     public float speed = 5f;
     private Rigidbody2D rb2d;
@@ -13,11 +14,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        transform.position = new Vector3(15,6,0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!isLocalPlayer){
+            return;
+        }
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         movimiento.x = x;
@@ -35,5 +40,9 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(x , y) * speed ;
         rb2d.velocity = movement;
         
+    }
+
+    public override void OnStartLocalPlayer(){
+        GetComponent<SpriteRenderer>().color = Color.red;
     }
 }

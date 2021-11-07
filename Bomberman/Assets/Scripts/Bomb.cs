@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Bomb : MonoBehaviour
+public class Bomb : NetworkBehaviour
 {
     public GameObject fire;
+
+    [SyncVar]
     public int firePower;
+
+    [SyncVar]
     public float fuse;
     GameController gc;
     Vector3[] directions = new Vector3[]{Vector3.up,Vector3.down,Vector3.left,Vector3.right};
