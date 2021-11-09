@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
+
+    PlayerController player;
+    public GameObject playerc;
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 0.3f);
+        player = GameObject.FindObjectOfType(typeof(PlayerController)) as PlayerController;
     }
 
     void Update(){
@@ -15,13 +19,25 @@ public class Fire : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D collision){
+        
         if(collision.gameObject.GetComponent<Fire>() == null){
-            Destroy(collision.gameObject);
+            Debug.Log("fire");
+            if(collision.gameObject.GetComponent<PlayerController>() != null){
+                Debug.Log("player");
+                player.die();
+            }else{
+                if(collision.gameObject.GetComponent<Monster>() != null){
+
+                    player.kill();
+                }
+                Destroy(collision.gameObject);
+            }
+            
+            
         }
         if(collision.gameObject.GetComponent<Bomb>() != null){
             collision.gameObject.GetComponent<Bomb>().Explode();
         }
-        
-        
+  
     }
 }

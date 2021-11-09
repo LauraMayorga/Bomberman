@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class Bomb : NetworkBehaviour
+public class Bomb : MonoBehaviour
 {
     public GameObject fire;
 
-    [SyncVar]
     public int firePower;
 
-    [SyncVar]
     public float fuse;
     GameController gc;
     Vector3[] directions = new Vector3[]{Vector3.up,Vector3.down,Vector3.left,Vector3.right};
+    public Transform enemy; 
     // Start is called before the first frame update
     void Start()
     {
         Invoke("Explode", fuse);
         gc = GameObject.Find("GameController").GetComponent<GameController>();
+        
     }
 
     public void Explode()
@@ -41,14 +40,13 @@ public class Bomb : NetworkBehaviour
         y = Mathf.Clamp(y ,0, GameController.Y - 1);
 
 
-        if(gc.level[x,y] ==null && fire < firePower){
+        if(gc.level[x,y] == null && fire < firePower){
             Instantiate(this.fire, transform.position + (offset * fire) , Quaternion.identity);
             SpawnFire(offset, ++fire);
         }else if(fire < firePower){
-            if(gc.level[x,y] != null && gc.level[x,y].tag == "Destroyable"){
+            if(gc.level[x,y] != null && gc.level[x,y].tag == "Destroyable" ){
                 Instantiate(this.fire, transform.position + (offset * fire) , Quaternion.identity);
             }
-            
         }
 
         
@@ -57,4 +55,5 @@ public class Bomb : NetworkBehaviour
     public void OnTriggerExit2D(Collider2D collision){
         GetComponent<BoxCollider2D>().isTrigger = false;
     }
+        
 }

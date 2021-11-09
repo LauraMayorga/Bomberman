@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Destroyable
+  - Safe
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - 
   - 
   - Players
-  - 
-  - 
-  - 
+  - level
+  - Finish
+  - Enemy
   - 
   - 
   - 

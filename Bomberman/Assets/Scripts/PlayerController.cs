@@ -1,28 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class PlayerController : NetworkBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
+    int vidas = 3;
+    int playersKill = 0;
     private Rigidbody2D rb2d;
     public Animator animator;
+    public GameOverScreen GameOverScreen;
+    public Win WinScreen;
+    public Collider2D bodyCollider;
+    public LayerMask finish; 
+    public heart heart1, heart2, heart3;
+
+    int score = 0;
+    
 
     Vector2 movimiento;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        transform.position = new Vector3(15,6,0);
+        transform.position = new Vector3(5,1,0);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!isLocalPlayer){
-            return;
-        }
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         movimiento.x = x;
@@ -39,10 +46,36 @@ public class PlayerController : NetworkBehaviour
         }
         Vector2 movement = new Vector2(x , y) * speed ;
         rb2d.velocity = movement;
+        if(bodyCollider.IsTouchingLayers(finish)){
+            WinScreen.SetUp(score+500);
+        }
         
     }
 
-    public override void OnStartLocalPlayer(){
-        GetComponent<SpriteRenderer>().color = Color.red;
+    public void die(){
+        if(vidas == 0){
+            transform.position = new Vector3(5,1,0);
+            Destroy(gameObject);
+            GameOverScreen.SetUp(playersKill*100);
+
+        }else{
+            transform.position = new Vector3(5,1,0);
+            if(vidas==3){
+                heart3.dieHeart();
+            }else if(vidas == 2){
+                heart2.dieHeart();
+            }else{
+                heart1.dieHeart();
+            }
+            vidas--;
+        }
+        
     }
+
+    public void kill(){
+        playersKill++;
+        score = score + 100;
+    }
+
+    
 }

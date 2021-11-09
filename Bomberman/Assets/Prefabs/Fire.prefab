@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7894969cff99bec42b80ea8f6dc03be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerc: {fileID: 8332764119674200244, guid: 0fe5fe9410375f145b4e095907113a9d, type: 3}
+  monster: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
 --- !u!58 &6085389268762977041
 CircleCollider2D:
   m_ObjectHideFlags: 0

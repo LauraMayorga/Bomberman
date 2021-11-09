@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public const int X = 29;
     public const int Y = 13;
     public GameObject[,] level = new GameObject[X,Y];
+    
 
     // Start is called before the first frame update
     void Start()
