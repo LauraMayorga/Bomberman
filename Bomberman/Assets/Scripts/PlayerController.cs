@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
+    public PlayerController skin1, skin2, skin3;
     int vidas = 3;
     int playersKill = 0;
     private Rigidbody2D rb2d;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Collider2D bodyCollider;
     public LayerMask finish; 
     public heart heart1, heart2, heart3;
+    public int selected;
 
     int score = 0;
     
@@ -22,6 +24,14 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //aqui llamar a lafuncion que me da el señalado
+        if(selected == 2){
+            skin2.gameObject.SetActive(true);
+            skin1.gameObject.SetActive(false);
+        }else if(selected == 3){
+            skin3.gameObject.SetActive(true);
+            skin1.gameObject.SetActive(false);
+        }
         rb2d = GetComponent<Rigidbody2D>();
         transform.position = new Vector3(5,1,0);
         
