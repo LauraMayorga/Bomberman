@@ -14,6 +14,7 @@ public class AIPAtrol : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D bodyCollider;
     public LayerMask groundLayer; 
+    public LayerMask startLayer; 
     public Transform player; 
     
     void Start()
@@ -28,7 +29,7 @@ public class AIPAtrol : MonoBehaviour
             Patrol();
         }
 
-        distToPlayer = Vector2.Distance(transform.position, player.position);
+        /*distToPlayer = Vector2.Distance(transform.position, player.position);
         if(distToPlayer <= range){
             if(vertical){
                 if((player.position.y > transform.position.y && transform.localScale.y < 0) || (player.position.y < transform.position.y && transform.localScale.y > 0)){
@@ -43,14 +44,14 @@ public class AIPAtrol : MonoBehaviour
                 rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
             }
             
-        }
+        }*/
 
         
 
     }
 
     void Patrol(){
-        if(bodyCollider.IsTouchingLayers(groundLayer)){
+        if(bodyCollider.IsTouchingLayers(groundLayer) || bodyCollider.IsTouchingLayers(startLayer)){
             Flip();
         }
         if(vertical){

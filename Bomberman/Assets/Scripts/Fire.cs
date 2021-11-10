@@ -6,7 +6,6 @@ public class Fire : MonoBehaviour
 {
 
     PlayerController player;
-    public GameObject playerc;
     // Start is called before the first frame update
     void Start()
     {

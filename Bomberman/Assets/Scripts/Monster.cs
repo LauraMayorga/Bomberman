@@ -8,7 +8,7 @@ public class Monster : MonoBehaviour
     public Collider2D bodyCollider;
     public LayerMask Players;
     public Animator animator;
-    public GameObject person;
+    public GameObject person, person2, person3;
     int kill = 0;
     public bool vertical;
      Vector2 movimiento;
@@ -37,6 +37,8 @@ public class Monster : MonoBehaviour
         if(kill ==  0){
             if(bodyCollider.IsTouchingLayers(Players)){
                 person.transform.position = new Vector3(5,1,0);
+                person2.transform.position = new Vector3(5,1,0);
+                person3.transform.position = new Vector3(5,1,0);
                 player.die();
                 kill++;
             }

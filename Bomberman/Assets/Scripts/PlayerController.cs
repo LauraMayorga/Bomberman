@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public Collider2D bodyCollider;
     public LayerMask finish; 
     public heart heart1, heart2, heart3;
-    public int selected;
 
     int score = 0;
     
@@ -25,6 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //aqui llamar a lafuncion que me da el señalado
+        int selected = 3;
         if(selected == 2){
             skin2.gameObject.SetActive(true);
             skin1.gameObject.SetActive(false);
