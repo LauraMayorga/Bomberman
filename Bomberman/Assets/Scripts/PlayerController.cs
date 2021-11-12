@@ -6,15 +6,17 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public PlayerController skin1, skin2, skin3;
-    int vidas = 3;
-    int playersKill = 0;
+    public int vidas = 3;
+    public int playersKill = 0;
     private Rigidbody2D rb2d;
     public Animator animator;
     public GameOverScreen GameOverScreen;
     public Win WinScreen;
     public Collider2D bodyCollider;
+
     public LayerMask finish; 
     public heart heart1, heart2, heart3;
+
 
     int score = 0;
     

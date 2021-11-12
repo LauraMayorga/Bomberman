@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: person3
       value: 
       objectReference: {fileID: 1780336866}
+    - target: {fileID: 2574581026062151083, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: Players.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3045436154682866473, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: m_Constraints
       value: 6
@@ -193,6 +197,10 @@ PrefabInstance:
     - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: m_Name
       value: Monster (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
@@ -631,6 +639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 992674106}
+  scene: 0
+  scoreF: 0
 --- !u!1001 &378780164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,6 +822,10 @@ PrefabInstance:
       propertyPath: vertical
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2574581026062151083, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: Players.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3045436154682866472, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: vertical
       value: 1
@@ -880,6 +894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
 --- !u!1001 &650778486
@@ -904,6 +922,10 @@ PrefabInstance:
     - target: {fileID: 2574581026062151083, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: vertical
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574581026062151083, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: Players.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 3045436154682866472, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: vertical
@@ -960,6 +982,10 @@ PrefabInstance:
     - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: m_Name
       value: Monster (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
@@ -1177,6 +1203,63 @@ RectTransform:
   m_AnchoredPosition: {x: -0, y: 20}
   m_SizeDelta: {x: 449.0244, y: 120.9137}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1019339113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 232.59058
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 102.79027
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -339.83813
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149148992039645678, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102995822986555713, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
+      propertyPath: m_Name
+      value: DataBetweenScenes
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7dbba3f6eb1c9d41b65357c890600aa, type: 3}
 --- !u!1 &1026225731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1620,10 @@ PrefabInstance:
       propertyPath: person3
       value: 
       objectReference: {fileID: 1780336866}
+    - target: {fileID: 2574581026062151083, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: Players.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3045436154682866473, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: m_Constraints
       value: 6
@@ -1589,6 +1676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
 --- !u!224 &1437387112
@@ -1627,6 +1718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 1817924805}
+  scene: 0
+  scoreF: 0
 --- !u!1 &1460503134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8332764119674200244, guid: 0fe5fe9410375f145b4e095907113a9d, type: 3}
@@ -1651,6 +1744,10 @@ PrefabInstance:
       propertyPath: person3
       value: 
       objectReference: {fileID: 1780336866}
+    - target: {fileID: 2574581026062151083, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: Players.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3045436154682866473, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: m_Constraints
       value: 6
@@ -1702,6 +1799,10 @@ PrefabInstance:
     - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: m_Name
       value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045436154682866479, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8365451774635814893, guid: a8daafa6b741bc24db035f44898809d7, type: 3}
       propertyPath: m_Controller
@@ -1932,7 +2033,7 @@ GameObject:
   - component: {fileID: 1666655696}
   - component: {fileID: 1666655695}
   - component: {fileID: 1666655697}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2132,7 +2233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8332764119674200244, guid: 0fe5fe9410375f145b4e095907113a9d, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8332764119674200244, guid: 0fe5fe9410375f145b4e095907113a9d, type: 3}
       propertyPath: m_IsActive
@@ -2186,6 +2287,10 @@ PrefabInstance:
       propertyPath: bodyCollider
       value: 
       objectReference: {fileID: 1784080560}
+    - target: {fileID: 8332764119674200251, guid: 0fe5fe9410375f145b4e095907113a9d, type: 3}
+      propertyPath: finish.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 8332764119674200251, guid: 0fe5fe9410375f145b4e095907113a9d, type: 3}
       propertyPath: GameOverScreen
       value: 
@@ -3991,12 +4096,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 226352187}
     - target: {fileID: 7686994409590387465, guid: 537ea8cf8769f694fa2200c186a26a82, type: 3}
+      propertyPath: finish.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686994409590387465, guid: 537ea8cf8769f694fa2200c186a26a82, type: 3}
       propertyPath: GameOverScreen
       value: 
       objectReference: {fileID: 1437387113}
     - target: {fileID: 7686994409590387467, guid: 537ea8cf8769f694fa2200c186a26a82, type: 3}
       propertyPath: m_Name
       value: PlayerRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686994409590387467, guid: 537ea8cf8769f694fa2200c186a26a82, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7686994409590387467, guid: 537ea8cf8769f694fa2200c186a26a82, type: 3}
       propertyPath: m_IsActive
@@ -4084,6 +4197,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 226352187}
     - target: {fileID: 8320019121734836210, guid: e6331cdc6471dbf45a438ece724c7186, type: 3}
+      propertyPath: finish.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320019121734836210, guid: e6331cdc6471dbf45a438ece724c7186, type: 3}
       propertyPath: GameOverScreen
       value: 
       objectReference: {fileID: 1437387113}
@@ -4134,6 +4251,10 @@ PrefabInstance:
     - target: {fileID: 8320019121734836223, guid: e6331cdc6471dbf45a438ece724c7186, type: 3}
       propertyPath: m_Name
       value: PlayerBlack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320019121734836223, guid: e6331cdc6471dbf45a438ece724c7186, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8320019121734836223, guid: e6331cdc6471dbf45a438ece724c7186, type: 3}
       propertyPath: m_IsActive
